@@ -1,6 +1,5 @@
 // Add Express
 const express = require("express");
-const bcrypt=require('bcrypt')
 // Initialize Express
 const app = express();
 
