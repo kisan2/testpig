@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "sideEffects": [
+    "node_modules/swagger-ui-dist/swagger-ui.css"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
