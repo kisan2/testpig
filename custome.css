@@ -1,37 +1,4 @@
-// Add Express
-const express = require("express");
-const bcrypt = require("bcryptjs");
-// Initialize Express
-const app = express();
-const swaggerJsDoc = require("swagger-jsdoc");
-const swaggerUiExpress = require("swagger-ui-express");
-// Create GET request
-app.get("/", (req, res) => {
-  res.send("Express on Vercel");
-});
-// swagger setup
-const swaggerOptions = {
-  customCssUrl: "swagger-ui.css",
-  definition: {
-    openapi: "3.0.0",
-    customCssUrl: "swagger-ui.css",
-
-    info: {
-      title:
-        "ABHYAM ROBOTICS INSTITUTION OF BUSSINESS AND TECHNOLOGY-Student Management System",
-      description: "Student Management System",
-      contact: {
-        name: "aribt Developers",
-      },
-      
-      customCssUrl: "swagger-ui.css",
-      servers: [process.env.PORT],
-    },
-  },
-  apis: ["./Routes/*.js"],
-};
-var options = {
-  customCss: `.swagger-ui {
+.swagger-ui {
     /* color: #3b4151; */
     color:red;
     font-family: sans-serif
@@ -11480,14 +11447,4 @@ var options = {
     display: block
 }
 
-/*# sourceMappingURL=swagger-ui.css.map*/`,
-
-};
-const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/doc", swaggerUiExpress.serve, swaggerUiExpress.setup(swaggerDocs,options));
-// Initialize server
-app.listen(5000, () => {
-  console.log("Running on port 5000.");
-});
-
-module.exports = app;
+/*# sourceMappingURL=swagger-ui.css.map*/
